@@ -1,9 +1,12 @@
 def generate_password(n):
     result = ""
     for i in range(1, n):
+        if i >= n // 2:
+            break
         for j in range(i + 1, n):
             if (i + j) % n == 0:
                 result += str(i) + str(j)
+                break
     return result
 
 
